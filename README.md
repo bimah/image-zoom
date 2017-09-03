@@ -29,9 +29,6 @@ The production built hasn't been fully optimized.
 * [Webpack](https://webpack.js.org/) - Module bundler.
 * [Alt](http://alt.js.org/) - State manager.
 * [Babel](https://babeljs.io/) - JavaScript compiler.
-
-The application is using SASS in conjunction with [CSS Modules](https://github.com/css-modules/css-modules).
-
-ESLint adopting [airbnb](https://www.npmjs.com/package/eslint-config-airbnb)'s config.
-
-CSS lint adopting [stylelint](https://github.com/stylelint/stylelint).
+* SASS in conjunction with [CSS Modules](https://github.com/css-modules/css-modules).
+* ESLint adopting [airbnb](https://www.npmjs.com/package/eslint-config-airbnb)'s config.
+* CSS lint adopting [stylelint](https://github.com/stylelint/stylelint).
