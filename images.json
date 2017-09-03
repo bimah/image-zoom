@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Onboarding Invite",
+    "fileName": "Onboarding-invite.png",
+    "url": "https://marvelapp.com/static/assets/images/onboarding/iphone6/Onboarding-invite.png"
+  },
+  {
+    "name": "Main Page",
+    "fileName": "Main-page.png",
+    "url": "https://marvelapp.com/static/assets/images/onboarding/web/Main-page.png"
+  },
+  {
+    "name": "Onboarding Location",
+    "fileName": "Onboarding-location.png",
+    "url": "https://marvelapp.com/static/assets/images/onboarding/ipad/Onboarding-location.png"
+  }
+]

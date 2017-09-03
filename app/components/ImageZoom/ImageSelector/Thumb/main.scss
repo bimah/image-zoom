@@ -1,0 +1,36 @@
+@import '../../../common';
+
+.thumb {
+  background-color: $white;
+  border: 0;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 15px;
+
+  .image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: 170px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+    width: 170px;
+  }
+
+  .name {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  &.selected {
+    .image {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    background-color: $light-blue;
+  }
+}

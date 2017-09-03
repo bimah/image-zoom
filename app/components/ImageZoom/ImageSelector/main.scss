@@ -1,0 +1,33 @@
+@import '../../common';
+
+.container {
+  background-color: $white;
+  border: 1px solid $dark-grey;
+  display: block;
+  height: 100%;
+  left: -200px;
+  position: fixed;
+  top: 0;
+  transition: all 0.5s ease;
+  width: 200px;
+  z-index: 99;
+
+  &.open {
+    left: 0;
+  }
+
+  .thumbs {
+    display: block;
+    height: 100%;
+    overflow: scroll;
+  }
+
+  .handler {
+    display: block;
+    height: 30px;
+    left: 198px;
+    position: absolute;
+    top: 10px;
+    width: 30px;
+  }
+}

@@ -1,0 +1,23 @@
+@import '../../common';
+
+.button {
+  background-color: $light-grey;
+  border: 1px solid $dark-grey;
+  color: $dark-grey;
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+
+  &.left {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  &.right {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}
