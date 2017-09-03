@@ -12,13 +12,10 @@ class ImageViewer extends React.Component {
     this.state = {
       images: [],
       imageInView: null,
-      dimensions: {
-        height: null,
-        width: null,
-      },
+      imageWidth: null,
       zoom: null,
+      viewportWidth: window.innerWidth - 60,
     };
-
 
     this.onImagesStoreChange = this.onImagesStoreChange.bind(this);
     this.onImgLoad = this.onImgLoad.bind(this);
@@ -39,14 +36,13 @@ class ImageViewer extends React.Component {
   }
 
   onImgLoad({ target: img }) {
+    const { viewportWidth } = this.state;
     const imageWidth = img.naturalWidth;
-    const imageHeigh = img.naturalHeight;
-    const viewportWidth = window.innerWidth - 60;
 
     const zoom = imageWidth <= viewportWidth ? 100 : Math.round(viewportWidth / (imageWidth / 100));
 
     this.setState({
-      dimensions: { height: imageHeigh, width: imageWidth },
+      imageWidth,
       zoom,
     });
   }
@@ -66,11 +62,10 @@ class ImageViewer extends React.Component {
   }
 
   render() {
-    const { imageInView, zoom, dimensions } = this.state;
+    const { imageInView, zoom, imageWidth, viewportWidth } = this.state;
 
-    const viewportWidth = window.innerWidth - 60;
-    const imgWidth = (dimensions.width / 100) * zoom;
-    const containerWidth = dimensions.width <= viewportWidth ? viewportWidth : dimensions.width;
+    const currentImageWidth = (imageWidth / 100) * zoom;
+    const containerWidth = imageWidth <= viewportWidth ? viewportWidth : imageWidth;
     const leftPosition = containerWidth >= viewportWidth
       ? ((containerWidth - viewportWidth) / 2) : 0;
 
@@ -89,7 +84,7 @@ class ImageViewer extends React.Component {
               src={imageInView.url}
               onLoad={this.onImgLoad}
               alt={imageInView.name}
-              style={{ width: `${imgWidth}px` }}
+              style={{ width: `${currentImageWidth}px` }}
             />}
         </div>
       </div>

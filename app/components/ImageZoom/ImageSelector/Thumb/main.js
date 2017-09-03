@@ -8,8 +8,7 @@ import styles from './main.scss';
 
 const cx = classNames.bind(styles);
 
-const Thumb = (props) => {
-  const { image, selected, index } = props;
+const Thumb = ({ image, selected, index }) => {
   const mainStyles = cx('thumb', {
     selected,
   });

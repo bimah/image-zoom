@@ -51,7 +51,7 @@ class ImageSelector extends React.Component {
           <Button label={buttonLable} direction="right" onClick={this.togglePanel} />
         </div>
         <div className={styles.thumbs}>
-          {images.map((image, i) =>
+          {images && images.length && images.map((image, i) =>
             <Thumb key={Math.random()} image={image} selected={imageSelected === i} index={i} />)}
         </div>
       </div>
